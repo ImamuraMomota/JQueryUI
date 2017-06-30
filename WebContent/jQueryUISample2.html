@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jQueryUIの練習</title>
+	<link type="text/css" rel="stylesheet"
+  		href="http://code.jquery.com/ui/1.10.3/themes/cupertino/jquery-ui.min.css" />
+	<script type="text/javascript"
+	  	src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript"
+	  	src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+</head>
+<body>
+
+	<div class="box">box</div>
+	<div class="target">target</div>
+
+	<style>
+		.box {
+			width: 50px;
+			height: 50px;
+			background: #ccc;
+			margin-bottom: 20px;
+			border: solid 1px;
+		}
+
+		.target {
+			width: 100px;
+			height: 100px;
+			background: pink;
+			border: solid 1px;
+		}
+		.hover {background: red;}
+	</style>
+
+	<script>
+		$(function() {
+			$('.box').draggable({
+				helper: 'clone'
+			});
+			$('.target').droppable({
+				accept: '.box',
+				hoverClass: 'hover',
+				tolerance: 'fit',
+				drop: function(event, ui) {
+					ui.draggable.clone().appendTo(this);
+					console.log('dropped!');
+				}
+			});
+
+		});
+
+	</script>
+
+
+</body>
+</html>

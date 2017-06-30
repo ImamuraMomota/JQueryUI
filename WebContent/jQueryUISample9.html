@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jQueryUIの練習</title>
+	<link type="text/css" rel="stylesheet"
+  		href="http://code.jquery.com/ui/1.10.3/themes/cupertino/jquery-ui.min.css" />
+	<script type="text/javascript"
+	  	src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript"
+	  	src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+</head>
+<body>
+	<input type="text" id="datepicker">
+
+	<script>
+		$(function(){
+			//DateのフォーマットはWebで確認できる
+			$('#datepicker').datepicker({
+				dateFormat: "yy-mm-dd",
+				numberOfMonths: 3,
+				minDate: -2,//現在日付の2日前
+				maxDate: "+1M"//一ヶ月後まで
+			});
+		});
+
+	</script>
+
+</body>
+</html>

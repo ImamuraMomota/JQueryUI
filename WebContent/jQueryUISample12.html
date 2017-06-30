@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jQueryUIの練習</title>
+	<link type="text/css" rel="stylesheet"
+  		href="http://code.jquery.com/ui/1.10.3/themes/cupertino/jquery-ui.min.css" />
+	<script type="text/javascript"
+	  	src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript"
+	  	src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+</head>
+<body>
+	<div id="tabs">
+
+	<ul>
+		<li><a href="#menu1">Menu1</a></li>
+		<li><a href="#menu2">Menu2</a></li>
+		<li><a href="#menu3">Menu3</a></li>
+	</ul>
+
+	<div id="menu1">menu 1</div>
+	<div id="menu2">menu 2</div>
+	<div id="menu3">menu 3</div>
+
+	</div>
+
+	<script>
+		$(function() {
+			$('#tabs').tabs({
+				selected: 2
+			});
+		});
+
+	</script>
+
+</body>
+</html>

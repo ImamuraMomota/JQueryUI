@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jQueryUIの練習</title>
+	<link type="text/css" rel="stylesheet"
+  		href="http://code.jquery.com/ui/1.10.3/themes/cupertino/jquery-ui.min.css" />
+	<script type="text/javascript"
+	  	src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript"
+	  	src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+</head>
+<body>
+	<button>click</button>
+
+	<input type="checkbox" id="check"><label for="check">check!</label>
+
+	<div id="set">
+	<input type="radio" name="radio" id="radio1"><label for="radio1">1</label>
+	<input type="radio" name="radio" id="radio2"><label for="radio2">2</label>
+	<input type="radio" name="radio" id="radio3"><label for="radio3">3</label>
+	</div>
+
+	<script>
+	$(function(){
+		$('button').button();
+		$('#check').button();
+		$('input[type=radio]').button();
+		$('#set').buttonset();
+	})
+	</script>
+</body>
+</html>

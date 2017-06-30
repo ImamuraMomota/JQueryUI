@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jQueryUIの練習</title>
+	<link type="text/css" rel="stylesheet"
+  		href="http://code.jquery.com/ui/1.10.3/themes/cupertino/jquery-ui.min.css" />
+	<script type="text/javascript"
+	  	src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript"
+	  	src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+</head>
+<body>
+
+	<div id="bar" style="widrh:200px"></div>
+
+	<div id="slider" style="width:200px;margin-top:20px"></div>
+
+	<script>
+	$(function() {
+		$('#bar').progressbar({
+			value:33
+		});
+		$('#slider').slider({
+			slide: function(event, ui) {
+				console.log(ui.value)
+				$('#bar').progressbar('option', 'value', ui.value);
+			}
+		});
+	});
+	</script>
+
+</body>
+</html>
